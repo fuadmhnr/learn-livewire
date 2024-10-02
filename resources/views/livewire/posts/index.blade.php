@@ -1,3 +1,5 @@
-<div>
-    {{-- Care about people's approval and you will be their prisoner. --}}
+<div class="row">
+    <div class="col-md-6">
+        <livewire:posts.create />
+    </div>
 </div>
