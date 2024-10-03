@@ -26,6 +26,8 @@ class PostForm extends Form
         // create a post via relation user->posts
         $user->posts()->create($this->validate());
 
+        flash('Post created successfully', 'success');
+
         // reset the form
         $this->reset();
     }
