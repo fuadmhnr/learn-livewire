@@ -2,9 +2,8 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use Livewire\Attributes\Title;
-
+use Livewire\Component;
 
 #[Title('Home')]
 class Home extends Component

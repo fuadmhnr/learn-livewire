@@ -3,9 +3,9 @@
 namespace App\Livewire\Forms;
 
 use App\Models\User;
-use Livewire\Attributes\Validate;
-use Livewire\Form;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Rule;
+use Livewire\Form;
 
 class PostForm extends Form
 {
@@ -17,14 +17,11 @@ class PostForm extends Form
 
     public function store()
     {
-        // TODO: get user id from auth
-        $user = User::find(1);
-
         // is there is no data is validated, use this
         // $validated = $this->all();
 
         // create a post via relation user->posts
-        $user->posts()->create($this->validate());
+        Auth::user()->posts()->create($this->validate());
 
         flash('Post created successfully', 'success');
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LogoutController;
 use App\Livewire;
 use App\Livewire\Login;
 use Illuminate\Support\Facades\Route;
@@ -12,4 +13,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/users/{user}', Livewire\Users\Show::class)->name('users.show');
 });
 
-Route::get('/login', Login::class)->name('login');
+Route::get('/login', Login::class)->name('login')->middleware('guest');
+Route::post('/logout', LogoutController::class)->name('logout');
