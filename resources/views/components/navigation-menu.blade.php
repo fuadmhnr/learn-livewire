@@ -11,13 +11,14 @@
           <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">Home</x-nav-link> 
           <x-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">About</x-nav-link> 
           <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">Contact</x-nav-link> 
-          <x-nav-link href="{{ route('timeline') }}" :active="request()->routeIs('timeline')">Timeline</x-nav-link> 
+          <x-nav-link href="{{ route('timeline') }}" :active="request()->routeIs('timeline')">Timeline</x-nav-link>
+          <x-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.index')">Users</x-nav-link>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           @auth
             <form action="{{ route('logout') }}" method="post">
               @csrf
-              <button type="submit" class="btn btn-primary">Logout</button>
+              <button type="submit" class="btn nav-link">Logout</button>
             </form>
           @else
           <x-nav-link href="{{ route('login') }}">Login</x-nav-link> 

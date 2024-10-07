@@ -10,6 +10,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/about', Livewire\About::class)->name('about');
     Route::get('/contact', Livewire\Contact::class)->name('contact');
     Route::get('/timeline', Livewire\Timeline::class)->name('timeline');
+    Route::get('/users', Livewire\Users\Index::class)->name('users.index');
     Route::get('/users/{user}', Livewire\Users\Show::class)->name('users.show');
 });
 
