@@ -21,11 +21,13 @@ class PostForm extends Form
         // $validated = $this->all();
 
         // create a post via relation user->posts
-        Auth::user()->posts()->create($this->validate());
+        $post = Auth::user()->posts()->create($this->validate());
 
         flash('Post created successfully', 'success');
 
         // reset the form
         $this->reset();
+
+        return $post;
     }
 }
