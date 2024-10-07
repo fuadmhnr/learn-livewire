@@ -11,7 +11,7 @@
           <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">Home</x-nav-link> 
           <x-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">About</x-nav-link> 
           <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">Contact</x-nav-link> 
-          <x-nav-link href="{{ route('posts.index') }}" :active="request()->routeIs('posts.index')">Posts</x-nav-link> 
+          <x-nav-link href="{{ route('timeline') }}" :active="request()->routeIs('timeline')">Timeline</x-nav-link> 
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           @auth
